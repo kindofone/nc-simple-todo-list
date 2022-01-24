@@ -4,7 +4,30 @@ import TodoList from './TodoList';
 function App() {
   return (
     <div className="App">
-      <TodoList />
+      <TodoList items={
+        [
+          {
+            id: 0,
+            text: "Task A",
+            complete: false,
+          },
+          {
+            id: 1,
+            text: "Task B",
+            complete: false,
+          },
+          {
+            id: 2,
+            text: "Task C",
+            complete: true,
+          },
+          {
+            id: 3,
+            text: "Task D",
+            complete: false,
+          },
+        ]
+      } />
     </div>
   );
 }

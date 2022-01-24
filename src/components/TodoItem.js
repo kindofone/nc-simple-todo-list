@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function TodoItem() {
+function TodoItem({id, text, complete, updateTaskCompleteState}) {
+  const onCheckedChange = () => {
+    updateTaskCompleteState(id, !complete);
+  }
+
   return (
     <div className='TodoItem'>
-      TodoItem
+      <label>{text}</label>
+      <input onChange={onCheckedChange} type="checkbox" checked={complete}></input>
     </div>
   );
 }
