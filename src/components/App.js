@@ -4,6 +4,7 @@ import TodoList from './TodoList';
 function App() {
   return (
     <div className="App">
+      {/* TodoList gets an 'items' prop which is an array of task objects */}
       <TodoList items={
         [
           {
